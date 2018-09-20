@@ -41,7 +41,7 @@ class Login extends Component {
                           <Button color="primary" onClick={this.props.handleOnLogin} className="px-4">Login</Button>
                         </Col>
                         <Col xs="6" className="text-right">
-                          <Button color="link" className="px-0">Forgot password?{this.props.auth}</Button>
+                          <Button color="link" className="px-0">Forgot password?</Button>
                         </Col>
                       </Row>
                     </Form>

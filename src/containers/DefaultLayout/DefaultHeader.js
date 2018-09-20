@@ -13,6 +13,19 @@ const propTypes = {
 const defaultProps = {};
 
 class DefaultHeader extends Component {
+
+  constructor(...props) {
+    super(props);
+    this.handleOnLogout=this.handleOnLogout.bind(this)
+  }
+
+  handleOnLogout()
+  {
+    localStorage.setItem("auth",false)
+
+    
+    alert('adios')
+  }
   render() {
 
     // eslint-disable-next-line
@@ -65,7 +78,7 @@ class DefaultHeader extends Component {
               <DropdownItem><i className="fa fa-file"></i> Projects<Badge color="primary">42</Badge></DropdownItem>
               <DropdownItem divider />
               <DropdownItem><i className="fa fa-shield"></i> Lock Account</DropdownItem>
-              <DropdownItem><i className="fa fa-lock"></i> Logout</DropdownItem>
+              <DropdownItem onClick={this.handleOnLogout}><i className="fa fa-lock"></i>  Logout </DropdownItem>
             </DropdownMenu>
           </AppHeaderDropdown>
         </Nav>
